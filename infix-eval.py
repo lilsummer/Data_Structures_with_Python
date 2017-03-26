@@ -38,19 +38,19 @@ def infixEval(expr):
 	oprStack = Stack()
 
 	for token in tokenList:
-	#if not token in allList:
-	#	print("infix has illegal character")
 		if token in numericList:
 			postfixList.append(token)
 			oprStack.push(int(token))
 		elif token == '(':
 			opStack.push(token)
 		elif token == ')':
+			# if there s matched (), then pop it
 			topToken = opStack.pop()
 			while topToken != '(':
 				postfixList.append(topToken)
 				topToken = opStack.pop()
 		else:
+			# when current operator precedes the token, append the current operator
 			while (not opStack.isEmpty()) and \
 			   (prec[opStack.peek()] >= prec[token]):
 				  postfixList.append(opStack.pop())
