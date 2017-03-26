@@ -1,5 +1,4 @@
-# Another way to think about the solution is that whenever an operator is seen
-# on the input, the two most recent operands will be used in the evaluation.
+# Modify the postfix evaluation algorithm so that it can handle errors.
 
 ## post fix evaluation
 class Stack:
