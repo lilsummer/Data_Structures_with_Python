@@ -55,11 +55,11 @@ def	doMath(oprnd1, oprnd2, operator1):
 	if operator1 == "+":
 		return (int(oprnd1 + oprnd2))
 	elif operator1 == "-":
-		return (int(oprnd1 + oprnd2))
+		return (int(oprnd1 - oprnd2))
 	elif operator1 == "*":
-		return (int(oprnd1 + oprnd2))
+		return (int(oprnd1 * oprnd2))
 	else:
-		return (int(oprnd1 + oprnd2))
+		return (int(oprnd1 / oprnd2))
 
 print(postfixEval('7 8 +'))
 print(postfixEval('7'))
